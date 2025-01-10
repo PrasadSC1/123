@@ -1,0 +1,96 @@
+
+
+
+  
+  .bg-purple{
+    background: linear-gradient(to right, #191A48, rgb(63, 64, 193));
+  }
+
+  /* General Navbar Styles */
+.navbar {
+  background-color: #6a1b9a; /* Purple background */
+  padding: 0.8rem 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffd900; /* Gold color for hover and active links */
+  border-bottom: 2px solid #ffd700; /* Highlighted underline */
+}
+
+.navbar-nav .btn-outline-light {
+  border-color: #ffd900;
+  color: #ffd700;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .btn-outline-light:hover {
+  background-color: #ffd700;
+  color: #6a1b9a;
+}
+
+/* Custom Login Button Styles */
+.custom-login-btn {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient colors */
+  color: white;
+  border: none;
+  border-radius: 25px; /* Rounded corners */
+  padding: 0.5rem 1.5rem; /* Button size */
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase; /* Make the text uppercase */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.custom-login-btn:hover {
+  transform: translateY(-2px); /* Lift the button on hover */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3); /* Add deeper shadow */
+  background: linear-gradient(90deg, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+  text-decoration: none; /* Remove underline on hover */
+  color: #ffffff; /* Ensure white color stays on hover */
+}
+
+.custom-login-btn:active {
+  transform: translateY(1px); /* Slight press effect */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow */
+}
+
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .navbar-nav .nav-link {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand span {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,165 @@
+.card-img-top {
+    height: 300px;
+    /* Set your desired height */
+    object-fit: contain;
+    /* Ensures the image covers the entire area without distortion */
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#pad {
+    padding-left: 3vw;
+}
+
+
+.btn-orange {
+    background: #ff6416;
+}
+
+
+
+
+.load-products-btn {
+    border-radius: 28px;
+    margin-left: 3vw;
+}
+
+@media (max-width: 768px) {
+    .filter-bar {
+        font-size: 4vw;
+        /* Adjust text size for small screens */
+    }
+}
+
+.load-products-btn svg {
+    margin-right: 8px;
+    /* Adjust the spacing as needed */
+}
+
+/*=======================================================*/
+
+/* Product card container */
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+}
+
+/* Product image */
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Product details section */
+.product-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Product title */
+.product-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Product description */
+.product-description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* Price and rating section */
+.price-rating {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-rating {
+  font-size: 1.1rem;
+  color: #f39c12;
+}
+
+/* Buy button */
+.buy-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 768px) {
+  .product-card {
+    flex-direction: row;
+    max-width: 800px;
+  }
+
+  .product-image {
+    flex: 1;
+  }
+
+  .product-info {
+    flex: 2;
+    padding: 20px 30px;
+  }
+}
+
+
+  
+  @media (max-width: 768px) {
+    .filter-bar {
+      padding: 1rem; /* Adjust padding for smaller screens */
+    }
+  }
+  
+
+  .filter-bar {
+    background-color: #f8f9fa; /* Optional: Light background for better contrast */
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+  }
+  
+  .form-label {
+    font-size: 0.9rem; /* Uniform label size */
+  }
+  
+  .btn-primary {
+    font-size: 0.9rem; /* Consistent button text size */
+  }
+  
+  .offcanvas-body {
+    max-height: 100vh;
+    overflow-y: auto; /* Enable scrolling if needed */
+  }
+  
+
