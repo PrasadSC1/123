@@ -1,6 +1,7 @@
 <div class="product-container">
   <!-- Button to trigger the modal -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" (click)="resetForm()">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal"
+    (click)="resetForm()">
     Add New Product
   </button>
 
@@ -61,42 +62,44 @@
       </div>
     </div>
   </div>
-  
-<div class="product-container">
-  <h3>Product List</h3>
-  <div class="product-list">
-    <div class="product-item" *ngFor="let product of products; let i = index">
-      <div class="product-card">
-        <div [attr.id]="'carouselExample' + i" class="carousel slide">
-          <div class="carousel-inner">
-            <div class="carousel-item" [class.active]="imageIndex === 0"
-              *ngFor="let imageUrl of product.imageUrls; let imageIndex = index">
-              <img [src]="getSanitizedUrl(imageUrl)" alt="Product Image" class="product-image " height="300px" width="300px">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExample' + i"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselExample' + i"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
 
-        <div class="product-details">
-          <h4 class="product-title">{{ product.name }}</h4>
-          <p class="product-info"><strong>Price:</strong> ₹{{ product.price | number:'1.2-2' }}</p>
-          <p class="product-info"><strong>Quantity:</strong> {{ product.quantity }}</p>
-          <p class="product-info"><strong>Description:</strong> {{ product.description }}</p>
-          <p class="product-info"><strong>Discount:</strong> {{ product.discount }}%</p>
-          <p class="product-info"><strong>Category:</strong> {{ product.catName }}</p>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal"  (click)="onEdit(product)">Update</button>
-          <button class="btn btn-delete" (click)="onDelete(product)">Delete</button>
+  <div class="product-container">
+    <h3>Product List</h3>
+    <div class="product-list">
+      <div class="product-item" *ngFor="let product of products; let i = index">
+        <div class="product-card">
+          <div [attr.id]="'carouselExample' + i" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item" [class.active]="imageIndex === 0"
+                *ngFor="let imageUrl of product.imageUrls; let imageIndex = index">
+                <img [src]="getSanitizedUrl(imageUrl)" alt="Product Image" class="product-image " height="300px"
+                  width="300px">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExample' + i"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselExample' + i"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div class="product-details">
+            <h4 class="product-title">{{ product.name }}</h4>
+            <p class="product-info"><strong>Price:</strong> ₹{{ product.price | number:'1.2-2' }}</p>
+            <p class="product-info"><strong>Quantity:</strong> {{ product.quantity }}</p>
+            <p class="product-info"><strong>Description:</strong> {{ product.description }}</p>
+            <p class="product-info"><strong>Discount:</strong> {{ product.discount }}%</p>
+            <p class="product-info"><strong>Category:</strong> {{ product.catName }}</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal"
+              (click)="onEdit(product)">Update</button>
+            <button class="btn btn-delete" (click)="onDelete(product)">Delete</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
